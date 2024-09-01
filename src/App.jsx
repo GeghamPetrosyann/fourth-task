@@ -4,6 +4,7 @@ import ProductList from './components/productList'
 import Basket from './components/Basket'
 
 export default function App() {
+
   const [products, setProducts] = useState([
     { id: 101, name: "Puma Rs-X1", price: 42, photo: "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_2000,h_2000/global/393161/01/sv01/fnd/PHL/fmt/png/RS-X-Games-Sneakers" },
     { id: 102, name: "Puma Rs-X2", price: 42, photo: "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/380462/01/fnd/PNA/fmt/png/RS-X-Mix-Men's-Sneakers" },
@@ -51,7 +52,6 @@ export default function App() {
   }
 
   return <>
-    <h1>Online Shop</h1>
     <div className='row'>
       <ProductList
         items={products}

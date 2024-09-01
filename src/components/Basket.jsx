@@ -1,7 +1,17 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 export default function Basket({ cart, onAdd, onReduce, onDelete }) {
+
+    const [total, setTotal] = useState(0)
+
+
+
+    useEffect(() => {
+        setTotal(cart.reduce((total, item) => total + (item.price * item.count), 0))
+    }, [cart])
+
     return <div className='col-md-5'>
+        <p><strong>Total Price {total}$</strong></p>
         <table className='table table-dark table-bordered'>
             <thead>
                 <tr>

@@ -9,6 +9,5 @@ export default function Product({ id, name, price, photo, onMove }) {
         <p>{name}</p>
         <p><strong>{price}$</strong></p>
         <button className='btn btn-outline-dark' onClick={() => onMove(id)}>move</button>
-
     </div>
 }
